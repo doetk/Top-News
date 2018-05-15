@@ -1,24 +1,8 @@
-<!-- <mat-toolbar color="primary">
-  <span>Top News</span>
-  <span class="spacer"></span>
-  <mat-icon></mat-icon>
-  {{today | date:'fullDate'}} {{today | date:'shortTime'}}
-</mat-toolbar>
-
-<ol>
-  <li *ngFor="let links of news">
-    <mat-card class="example-card">
-      <a href={{links.url}} target="_blank">{{links.title}}
-      </a>
-    </mat-card>
-    <br>
-    <br>
-  </li>
-</ol> -->
 <mat-toolbar color="primary">
-  <span>Top News</span>
+  <mat-icon class="icon">list_alt</mat-icon>
+  <span class="head"> Top News</span>
   <span class="spacer"></span>
-  <mat-icon></mat-icon>
+
   {{today | date:'fullDate'}} {{today | date:'shortTime'}}
 </mat-toolbar>
 

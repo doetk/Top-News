@@ -6,7 +6,7 @@ let win;
 
 function createWindow() {
   win = new BrowserWindow({
-    width: 800,
+    width: 1000,
     height: 600,
     icon: path.join(__dirname, 'assets/icons/64x64.png'),
   });

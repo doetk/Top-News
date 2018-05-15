@@ -40,4 +40,11 @@ export class TopNewsService {
       )
       .pipe(map((res: Response) => res.json()));
   }
+  getTemp() {
+    return this.http
+      .get(
+        `http://api.wunderground.com/api/ccbbbdce2e16b3c4/conditions/q/OH/Cincinnati.json`,
+      )
+      .pipe(map((res: Response) => res.json()));
+  }
 }

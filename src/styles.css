@@ -5,32 +5,9 @@ body {
   margin: 0;
 }
 
-ol {
-  color: gray;
-  margin-left: 15%;
-  margin-right: 15%;
-}
-
-a {
-  text-decoration: none;
-  line-height: 30px;
-  color: rgb(84, 94, 184)
-}
-
-a:hover {
-  color: rgb(55, 121, 175);
-}
-
-a:visited {
-  color: rgb(101, 30, 119);
-}
-
-a img {
-  float: left;
-}
-
-li {
-  padding-left: 20px;
+.mat-toolbar {
+  position: fixed;
+  z-index: 997;
 }
 
 .mat-icon {
@@ -39,10 +16,35 @@ li {
 }
 
 .mat-tab-group {
-  display: flex;
+  position: relative;
+  top: 64px;
 }
 
 .mat-tab-label {
   flex-basis: 0;
   flex-grow: 1;
+}
+
+ol {
+  color: gray;
+  margin-left: 18%;
+  margin-right: 18%;
+}
+
+a {
+  text-decoration: none;
+  line-height: 30px;
+  color: #0D47A1;
+}
+
+a:hover {
+  color: #0091EA
+}
+
+a:visited {
+  color: gray;
+}
+
+li {
+  padding-left: 20px;
 }

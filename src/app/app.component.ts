@@ -7,6 +7,7 @@ import { TopNewsService } from './services/news-service.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  temp: any;
   today;
   techNews;
   bizzNews;
@@ -17,11 +18,15 @@ export class AppComponent implements OnInit {
     this.today = new Date();
     setInterval(() => {
       this.today = new Date();
-      // this.BizzNews();
-      // this.TechNews();
-      // this.SportsNews();
-      // this.HealthNews();
     }, 1000);
+
+    setInterval(() => {
+      this.today = new Date();
+      this.BizzNews();
+      this.TechNews();
+      this.SportsNews();
+      this.HealthNews();
+    }, 60000);
   }
 
   ngOnInit(): void {
@@ -29,6 +34,7 @@ export class AppComponent implements OnInit {
     this.TechNews();
     this.SportsNews();
     this.HealthNews();
+    this.GetTemp();
   }
 
   BizzNews(): void {
@@ -52,5 +58,10 @@ export class AppComponent implements OnInit {
     this.topNewsService
       .getHealthNews()
       .subscribe(data => (this.healthNews = data.articles));
+  }
+  GetTemp(): void {
+    this.topNewsService
+      .getTemp()
+      .subscribe(data => console.log(data.current_observation.icon_url));
   }
 }
