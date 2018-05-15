@@ -1,0 +1,94 @@
+<!-- <mat-toolbar color="primary">
+  <span>Top News</span>
+  <span class="spacer"></span>
+  <mat-icon></mat-icon>
+  {{today | date:'fullDate'}} {{today | date:'shortTime'}}
+</mat-toolbar>
+
+<ol>
+  <li *ngFor="let links of news">
+    <mat-card class="example-card">
+      <a href={{links.url}} target="_blank">{{links.title}}
+      </a>
+    </mat-card>
+    <br>
+    <br>
+  </li>
+</ol> -->
+<mat-toolbar color="primary">
+  <span>Top News</span>
+  <span class="spacer"></span>
+  <mat-icon></mat-icon>
+  {{today | date:'fullDate'}} {{today | date:'shortTime'}}
+</mat-toolbar>
+
+<mat-tab-group class="demo-tab-group">
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <div>
+
+        <mat-icon>business</mat-icon>
+        Business
+      </div>
+
+    </ng-template>
+    <ol>
+      <li *ngFor="let links of bizzNews">
+        <a href={{links.url}} target="_blank">{{links.title}}
+        </a>
+
+        <br>
+        <br>
+      </li>
+    </ol>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>code</mat-icon>
+      Technology
+    </ng-template>
+    <ol>
+      <li *ngFor="let links of techNews">
+        <a href={{links.url}} target="_blank">{{links.title}}
+        </a>
+
+        <br>
+        <br>
+      </li>
+    </ol>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>pool</mat-icon>
+      Sports
+    </ng-template>
+    <ol>
+      <li *ngFor="let links of sportsNews">
+        <a href={{links.url}} target="_blank">{{links.title}}
+        </a>
+
+        <br>
+        <br>
+      </li>
+    </ol>
+  </mat-tab>
+
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>local_hospital</mat-icon>
+      Health
+    </ng-template>
+    <ol>
+      <li *ngFor="let links of healthNews">
+        <a href={{links.url}} target="_blank">{{links.title}}
+        </a>
+
+        <br>
+        <br>
+      </li>
+    </ol>
+  </mat-tab>
+</mat-tab-group>
