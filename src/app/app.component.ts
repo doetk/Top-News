@@ -7,6 +7,7 @@ import { TopNewsService } from './services/news-service.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
+  icon: any;
   temp: any;
   today;
   techNews;
@@ -26,6 +27,7 @@ export class AppComponent implements OnInit {
       this.TechNews();
       this.SportsNews();
       this.HealthNews();
+      this.GetTemp();
     }, 60000);
   }
 
@@ -60,8 +62,10 @@ export class AppComponent implements OnInit {
       .subscribe(data => (this.healthNews = data.articles));
   }
   GetTemp(): void {
-    this.topNewsService
-      .getTemp()
-      .subscribe(data => console.log(data.current_observation.icon_url));
+    this.topNewsService.getTemp().subscribe(data => {
+      this.icon = data.current_observation.icon_url;
+      this.temp = data.current_observation.temp_f;
+      // console.log(data.current_observation.temp_f);
+    });
   }
 }

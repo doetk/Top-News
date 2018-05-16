@@ -2,8 +2,10 @@
   <mat-icon class="icon">list_alt</mat-icon>
   <span class="head"> Top News</span>
   <span class="spacer"></span>
-
-  {{today | date:'fullDate'}} {{today | date:'shortTime'}}
+  {{temp}} &deg;F &nbsp;
+  <img src={{icon}} alt="temp in F" style="width:30px;height:30px;">
+  <span class="spacer"></span>
+  {{today | date:'fullDate'}} &nbsp;{{today | date:'shortTime'}}
 </mat-toolbar>
 
 <mat-tab-group class="demo-tab-group">
