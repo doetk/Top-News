@@ -2,7 +2,7 @@
 
 # compiled output
 /dist
-
+/release-builds
 
 # dependencies
 /node_modules
