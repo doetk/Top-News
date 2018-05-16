@@ -12,7 +12,8 @@
     "electron": "electron .",
     "electron-build": "ng build --prod && npm run electron .",
     "package-linux": "electron-packager . top-news --overwrite --asar=true --platform=linux --arch=x64  --prune=true --out=release-builds",
-    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds"
+    "package-mac": "electron-packager . --overwrite --platform=darwin --arch=x64 --prune=true --out=release-builds",
+    "package-win": "electron-packager . top-news --overwrite --asar=true --platform=win64 --arch=ia64 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"Top-News App\""
   },
   "private": true,
   "dependencies": {
