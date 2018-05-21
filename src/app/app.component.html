@@ -9,7 +9,21 @@
 </mat-toolbar>
 
 <mat-tab-group class="demo-tab-group">
+  <mat-tab>
+    <ng-template mat-tab-label>
+      <mat-icon>bug_report</mat-icon>
+      Technology
+    </ng-template>
+    <ol>
+      <li *ngFor="let links of techNews">
+        <a href={{links.url}} target="_blank">{{links.title}}
+        </a>
 
+        <br>
+        <br>
+      </li>
+    </ol>
+  </mat-tab>
   <mat-tab>
     <ng-template mat-tab-label>
       <div>
@@ -21,22 +35,6 @@
     </ng-template>
     <ol>
       <li *ngFor="let links of bizzNews">
-        <a href={{links.url}} target="_blank">{{links.title}}
-        </a>
-
-        <br>
-        <br>
-      </li>
-    </ol>
-  </mat-tab>
-
-  <mat-tab>
-    <ng-template mat-tab-label>
-      <mat-icon>code</mat-icon>
-      Technology
-    </ng-template>
-    <ol>
-      <li *ngFor="let links of techNews">
         <a href={{links.url}} target="_blank">{{links.title}}
         </a>
 
